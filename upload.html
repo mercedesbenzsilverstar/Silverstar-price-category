@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Models and Prices</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Models and Prices</h1>
+        
+        <!-- Login Form -->
+        <div id="login-portal">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Admin Portal -->
+        <div id="admin-portal" class="hidden">
+            <h2>Admin Portal</h2>
+            <form id="car-form">
+                <input type="text" id="car-model" placeholder="Car Model" required>
+                <input type="number" id="ex-showroom-price" placeholder="Ex-Showroom Price" required>
+                <input type="number" id="on-road-price" placeholder="On-Road Price" required>
+                <select id="car-category" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    <option value="Demo">Demo</option>
+                    <option value="New Car">New Car</option>
+                    <option value="Used Car">Used Car</option>
+                </select>
+                <input type="file" id="car-image" accept="image/*" required>
+                <button type="submit">Add/Update Car</button>
+            </form>
+            <input type="text" id="admin-search" placeholder="Search...">
+            <table id="admin-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Ex-Showroom Price</th>
+                        <th>On-Road Price</th>
+                        <th>Difference</th>
+                        <th>Category</th>
+                        <th>Image</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        
+        <!-- Employee Portal -->
+        <div id="employee-portal" class="hidden">
+            <h2>Employee Portal</h2>
+            <input type="text" id="employee-search" placeholder="Search...">
+            <table id="employee-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Ex-Showroom Price</th>
+                        <th>On-Road Price</th>
+                        <th>Difference</th>
+                        <th>Category</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="upload.js"></script>
+</body>
+</html>
